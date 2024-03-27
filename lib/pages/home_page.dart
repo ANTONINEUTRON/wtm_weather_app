@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:wtm_weather_app/gen/assets.gen.dart';
 
 class HomePage extends StatelessWidget {
   const HomePage({super.key});
@@ -34,8 +35,66 @@ class HomePage extends StatelessWidget {
           )
         ],
       ),
-      body: ListView(
-        children: [Text("WELCOME")],
+      body: Container(
+        padding: EdgeInsets.symmetric(horizontal: 16, vertical: 24,),
+        child: Column(
+          mainAxisAlignment: MainAxisAlignment.spaceAround,
+          crossAxisAlignment: CrossAxisAlignment.center,
+          children: [
+            Container(
+              child: Column(
+                children: [
+                  Text(
+                    "Friday, 22 December 2024",
+                    style: TextStyle(
+                      fontSize: 18,
+                    ),
+                  ),
+                  Text(
+                    "22'C",
+                    style: TextStyle(fontSize: 96),
+                  ),
+                ],
+              ),
+            ),
+            Container(
+              child: Column(
+                children: [
+                  Assets.drizzle.image(),
+                  Text(
+                    "Light Drizzle",
+                    style: TextStyle(
+                      fontSize: 18,
+                    ),
+                  ),
+                  
+                ],
+              ),
+            ),
+            Container(
+              child: Row(
+                mainAxisAlignment: MainAxisAlignment.center,
+                children: [
+                  Text(
+                    "09:18 am",
+                    style: TextStyle(
+                      fontSize: 18,
+                    ),
+                  ),
+                  SizedBox(
+                    width: 16,
+                  ),
+                  Text(
+                    "06:32 am",
+                    style: TextStyle(
+                      fontSize: 18,
+                    ),
+                  )
+                ],
+              ),
+            )
+          ],
+        ),
       ),
     );
   }

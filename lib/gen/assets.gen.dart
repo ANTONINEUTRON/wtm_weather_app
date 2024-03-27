@@ -13,9 +13,12 @@ class Assets {
   Assets._();
 
   static const AssetGenImage drizzle = AssetGenImage('assets/drizzle.png');
+  static const AssetGenImage sun = AssetGenImage('assets/sun.png');
+  static const AssetGenImage sunrise = AssetGenImage('assets/sunrise.png');
+  static const AssetGenImage sunset = AssetGenImage('assets/sunset.png');
 
   /// List of all assets
-  static List<AssetGenImage> get values => [drizzle];
+  static List<AssetGenImage> get values => [drizzle, sun, sunrise, sunset];
 }
 
 class AssetGenImage {

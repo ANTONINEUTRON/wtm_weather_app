@@ -6,8 +6,19 @@ import 'package:wtm_weather_app/gen/assets.gen.dart';
 import 'package:wtm_weather_app/pages/select_city_page.dart';
 import 'package:wtm_weather_app/pages/settings_page.dart';
 
-class HomePage extends StatelessWidget {
+class HomePage extends StatefulWidget {
   const HomePage({super.key});
+
+  @override
+  State<HomePage> createState() => _HomePageState();
+}
+
+class _HomePageState extends State<HomePage> {
+  @override
+  void initState() {
+    super.initState();
+    context.read<WeatherBloc>().fetchWeather();
+  }
 
   @override
   Widget build(BuildContext context) {

@@ -11,7 +11,7 @@ class WeatherResponse with _$WeatherResponse {
     required double latitude,
     required double longitude,
     required double elevation,
-    @JsonValue("current_units") required UnitsModel currentUnits,
+    required UnitsModel current_units,
     required Current current,
   }) = _WeatherResponse;
 

@@ -23,8 +23,7 @@ mixin _$WeatherResponse {
   double get latitude => throw _privateConstructorUsedError;
   double get longitude => throw _privateConstructorUsedError;
   double get elevation => throw _privateConstructorUsedError;
-  @JsonValue("current_units")
-  UnitsModel get currentUnits => throw _privateConstructorUsedError;
+  UnitsModel get current_units => throw _privateConstructorUsedError;
   Current get current => throw _privateConstructorUsedError;
 
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
@@ -43,10 +42,10 @@ abstract class $WeatherResponseCopyWith<$Res> {
       {double latitude,
       double longitude,
       double elevation,
-      @JsonValue("current_units") UnitsModel currentUnits,
+      UnitsModel current_units,
       Current current});
 
-  $UnitsModelCopyWith<$Res> get currentUnits;
+  $UnitsModelCopyWith<$Res> get current_units;
   $CurrentCopyWith<$Res> get current;
 }
 
@@ -66,7 +65,7 @@ class _$WeatherResponseCopyWithImpl<$Res, $Val extends WeatherResponse>
     Object? latitude = null,
     Object? longitude = null,
     Object? elevation = null,
-    Object? currentUnits = null,
+    Object? current_units = null,
     Object? current = null,
   }) {
     return _then(_value.copyWith(
@@ -82,9 +81,9 @@ class _$WeatherResponseCopyWithImpl<$Res, $Val extends WeatherResponse>
           ? _value.elevation
           : elevation // ignore: cast_nullable_to_non_nullable
               as double,
-      currentUnits: null == currentUnits
-          ? _value.currentUnits
-          : currentUnits // ignore: cast_nullable_to_non_nullable
+      current_units: null == current_units
+          ? _value.current_units
+          : current_units // ignore: cast_nullable_to_non_nullable
               as UnitsModel,
       current: null == current
           ? _value.current
@@ -95,9 +94,9 @@ class _$WeatherResponseCopyWithImpl<$Res, $Val extends WeatherResponse>
 
   @override
   @pragma('vm:prefer-inline')
-  $UnitsModelCopyWith<$Res> get currentUnits {
-    return $UnitsModelCopyWith<$Res>(_value.currentUnits, (value) {
-      return _then(_value.copyWith(currentUnits: value) as $Val);
+  $UnitsModelCopyWith<$Res> get current_units {
+    return $UnitsModelCopyWith<$Res>(_value.current_units, (value) {
+      return _then(_value.copyWith(current_units: value) as $Val);
     });
   }
 
@@ -122,11 +121,11 @@ abstract class _$$WeatherResponseImplCopyWith<$Res>
       {double latitude,
       double longitude,
       double elevation,
-      @JsonValue("current_units") UnitsModel currentUnits,
+      UnitsModel current_units,
       Current current});
 
   @override
-  $UnitsModelCopyWith<$Res> get currentUnits;
+  $UnitsModelCopyWith<$Res> get current_units;
   @override
   $CurrentCopyWith<$Res> get current;
 }
@@ -145,7 +144,7 @@ class __$$WeatherResponseImplCopyWithImpl<$Res>
     Object? latitude = null,
     Object? longitude = null,
     Object? elevation = null,
-    Object? currentUnits = null,
+    Object? current_units = null,
     Object? current = null,
   }) {
     return _then(_$WeatherResponseImpl(
@@ -161,9 +160,9 @@ class __$$WeatherResponseImplCopyWithImpl<$Res>
           ? _value.elevation
           : elevation // ignore: cast_nullable_to_non_nullable
               as double,
-      currentUnits: null == currentUnits
-          ? _value.currentUnits
-          : currentUnits // ignore: cast_nullable_to_non_nullable
+      current_units: null == current_units
+          ? _value.current_units
+          : current_units // ignore: cast_nullable_to_non_nullable
               as UnitsModel,
       current: null == current
           ? _value.current
@@ -180,7 +179,7 @@ class _$WeatherResponseImpl implements _WeatherResponse {
       {required this.latitude,
       required this.longitude,
       required this.elevation,
-      @JsonValue("current_units") required this.currentUnits,
+      required this.current_units,
       required this.current});
 
   factory _$WeatherResponseImpl.fromJson(Map<String, dynamic> json) =>
@@ -193,14 +192,13 @@ class _$WeatherResponseImpl implements _WeatherResponse {
   @override
   final double elevation;
   @override
-  @JsonValue("current_units")
-  final UnitsModel currentUnits;
+  final UnitsModel current_units;
   @override
   final Current current;
 
   @override
   String toString() {
-    return 'WeatherResponse(latitude: $latitude, longitude: $longitude, elevation: $elevation, currentUnits: $currentUnits, current: $current)';
+    return 'WeatherResponse(latitude: $latitude, longitude: $longitude, elevation: $elevation, current_units: $current_units, current: $current)';
   }
 
   @override
@@ -214,15 +212,15 @@ class _$WeatherResponseImpl implements _WeatherResponse {
                 other.longitude == longitude) &&
             (identical(other.elevation, elevation) ||
                 other.elevation == elevation) &&
-            (identical(other.currentUnits, currentUnits) ||
-                other.currentUnits == currentUnits) &&
+            (identical(other.current_units, current_units) ||
+                other.current_units == current_units) &&
             (identical(other.current, current) || other.current == current));
   }
 
   @JsonKey(ignore: true)
   @override
   int get hashCode => Object.hash(
-      runtimeType, latitude, longitude, elevation, currentUnits, current);
+      runtimeType, latitude, longitude, elevation, current_units, current);
 
   @JsonKey(ignore: true)
   @override
@@ -244,7 +242,7 @@ abstract class _WeatherResponse implements WeatherResponse {
       {required final double latitude,
       required final double longitude,
       required final double elevation,
-      @JsonValue("current_units") required final UnitsModel currentUnits,
+      required final UnitsModel current_units,
       required final Current current}) = _$WeatherResponseImpl;
 
   factory _WeatherResponse.fromJson(Map<String, dynamic> json) =
@@ -257,8 +255,7 @@ abstract class _WeatherResponse implements WeatherResponse {
   @override
   double get elevation;
   @override
-  @JsonValue("current_units")
-  UnitsModel get currentUnits;
+  UnitsModel get current_units;
   @override
   Current get current;
   @override
